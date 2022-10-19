@@ -1,44 +1,58 @@
-# Python3 Program for recursive binary search.
-  
-# Returns index of x in arr if present, else -1
-def binarySearch (arr, l, larr, x):
-  
-    # Check base case
-    if larr >= l:
-  
-        mid = l + (larr - l) // 2
-  
-        # If element is present at the middle itself
-        if arr[mid] == x:
-            return mid
-          
-        # If element is smaller than mid, then it
-        # can only be present in left subarray
-        elif arr[mid] > x:
-            return binarySearch(arr, l, mid-1, x)
-  
-        # Else the element can only be present
-        # in right subarray
+def binarySearch(lys, val):
+    first = 0
+    last = len(lys) - 1
+    index = -1
+    while (first <= last) and (index == -1):
+        mid = (first + last)//2
+        if lys[mid] == val:
+            index = mid
         else:
-            return binarySearch(arr, mid+1, larr, x)
+            if val < lys[mid]:
+                last = mid - 1
+            else:
+                first = mid + 1
+    return index
   
-    else:
-        # Element is not present in the array
-        return -1
-  
-# Driver Code
-arr = [ 2, 3, 4, 10, 40 ]
-x = 10
-  
-# Function call
-result = binarySearch(arr, 0, len(arr)-1, x)
-  
-if result != -1:
-    print ("Element is present at index % d" % result)
-else:
-    print ("Element is not present in array")
+print(BinarySearch([10,20,30,40,50], 20))
 
 #_____________________________________________________
 '''
-Element is present at index 3
+1
 '''
+
+
+
+
+
+
+
+
+
+
+# def binarySearch (arr, l, larr, x):
+  
+#     if larr >= l:
+
+#         mid = l + (larr - l) // 2
+  
+#         if arr[mid] == x:
+#             return mid
+          
+#         elif arr[mid] > x:
+#             return binarySearch(arr, l, mid-1, x)
+
+#         else:
+#             return binarySearch(arr, mid+1, larr, x)
+  
+#     else:
+#         return -1
+  
+# arr = [ 2, 3, 4, 10, 40 ]
+# x = 10
+  
+# result = binarySearch(arr, 0, len(arr)-1, x)
+  
+# if result != -1:
+#     print ("Element is present at index % d" % result)
+# else:
+#     print ("Element is not present in array")
