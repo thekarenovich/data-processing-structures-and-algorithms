@@ -44,7 +44,7 @@ G.set_edge('a','e',10)
 G.set_edge('a','c',20)
 G.set_edge('c','b',30)
 G.set_edge('b','e',40)
-G.set_edge('e','d',50)
+G.set_edge('e','d',50) 
 G.set_edge('f','e',60)
   
 print("Vertices of Graph")
