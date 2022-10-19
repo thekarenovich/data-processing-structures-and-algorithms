@@ -7,7 +7,7 @@ class Graph:
         self.verticeslist =[0]*numvertex 
   
     def set_vertex(self, vtx, id): 
-        if 0<=vtx<=self.numvertex:
+        if 0<=vtx<=self.numvertex: 
             self.vertices[id] = vtx
             self.verticeslist[vtx] = id
   
