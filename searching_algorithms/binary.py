@@ -20,7 +20,7 @@ def binarySearch(lys, val):
                 first = mid + 1
     return index
   
-print(BinarySearch([10,20,30,40,50], 20))
+print(binarySearch([10,20,30,40,50], 20))
 
 #_____________________________________________________
 '''
