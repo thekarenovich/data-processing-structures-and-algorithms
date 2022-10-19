@@ -9,6 +9,7 @@ def fun1(x, y) :
         return fun1(x - 1, x + y)
 
 print(fun1(5, 2))     
+
 #________________
 '''
 17
