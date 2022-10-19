@@ -4,7 +4,7 @@ class Graph:
         self.adjMatrix = [[-1]*numvertex for x in range(numvertex)]
         self.numvertex = numvertex
         self.vertices = {} 
-        self.verticeslist =[0]*numvertex
+        self.verticeslist =[0]*numvertex 
   
     def set_vertex(self, vtx, id): 
         if 0<=vtx<=self.numvertex:
