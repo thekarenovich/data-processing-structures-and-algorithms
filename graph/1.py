@@ -8,7 +8,7 @@ class Graph:
   
     def set_vertex(self, vtx, id): 
         if 0<=vtx<=self.numvertex: 
-            self.vertices[id] = vtx
+            self.vertices[id] = vtx 
             self.verticeslist[vtx] = id
   
     def set_edge(self, frm, to, cost=0):
